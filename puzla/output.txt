@@ -1,0 +1,12 @@
+./slike/slika 1/part x.jpg 0 0
+./slike/slika 1/part g.jpg 1 0
+./slike/slika 1/part h.jpg 2 0
+./slike/slika 1/part e.jpg 0 1
+./slike/slika 1/part f.jpg 3 0
+./slike/slika 1/part w.jpg 1 1
+./slike/slika 1/part d.jpg 2 1
+./slike/slika 1/part b.jpg 3 1
+./slike/slika 1/part c.jpg 0 2
+./slike/slika 1/part a.jpg 1 2
+./slike/slika 1/part y.jpg 2 2
+./slike/slika 1/part z.jpg 3 2

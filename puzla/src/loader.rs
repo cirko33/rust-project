@@ -1,6 +1,6 @@
 use std::{fs, thread, sync::{Arc, Mutex}};
 use image::{GenericImageView, RgbImage};    
-use crate::{my_image::{ImagePixels, Image}, rgb::Rgb};
+use crate::{my_image::Image, rgb::Rgb};
 
 
 pub fn load_images(folder_path: &str) -> Vec<Image> {
