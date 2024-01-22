@@ -12,17 +12,18 @@ use wh::{get_max_wh, get_grid_wh};
 use factor::{get_factors, sort_factors};
 use loader::{load_images, load_main_image};
 use write_in_file::write_factors;
-use std::env;
+use std::{env, time::Instant};
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    if args.len() < 3 {
+    if args.len() < 2 {
         panic!("Not enough arguments provided.");
     }
 
     let puzzle_path = format!("./slike/slika {}/", args[1].to_string());
-    let main_image_path = format!("./slike/picture{}.jpg", args[2].to_string());
-    
+    let main_image_path = format!("./slike/picture{}.jpg", args[1].to_string());
+
+    let start = Instant::now();
     let images = load_images(&puzzle_path);
     let main_image = load_main_image(&main_image_path);
 
@@ -34,4 +35,5 @@ fn main() {
 
     let ret = find_mins_and_execute(&mut factors, grid_h, grid_w);
     write_factors(ret, max_w, max_h);
+    println!("Time elapsed: {} ms", start.elapsed().as_millis());
 }
