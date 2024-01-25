@@ -19,11 +19,12 @@ fn main() {
     if args.len() < 2 {
         panic!("Not enough arguments provided.");
     }
+    
+    let start = Instant::now();
 
     let puzzle_path = format!("./slike/slika {}/", args[1].to_string());
     let main_image_path = format!("./slike/picture{}.jpg", args[1].to_string());
 
-    let start = Instant::now();
     let images = load_images(&puzzle_path);
     let main_image = load_main_image(&main_image_path);
 
